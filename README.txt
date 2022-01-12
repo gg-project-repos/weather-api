@@ -21,7 +21,7 @@
    Request Body :
    -------------
    {
-      "place" : <city_name> ,
+      "place" : <city_name>
    }
    
    
