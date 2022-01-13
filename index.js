@@ -23,14 +23,10 @@ app.get('/', function(req, res) {
 
 // CURRENT WEATHER ENDPOINT
 app.post('/current', async function(req, res) {
-
     var params = req.body;
-    
     console.log(params);
-
     var resData = {}
     resData["current_weather_data"] = await weatherHandler(params, CURRENT)
-
     res.json(resData)
 });
 
@@ -46,9 +42,8 @@ app.post('/forecast', async function(req, res) {
 async function weatherHandler (params, dataNeeded) {
 
     var place = params.place;
-
     var paramKeys = Object.keys(params)
-
+    
     if(paramKeys.includes("lat") && paramKeys.includes("lon")) {
         lat = params.lat
         lon = params.lon
