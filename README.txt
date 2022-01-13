@@ -1,15 +1,26 @@
-# Weather API
+Weather API Documentation
+=========================
+
+STEPS TO DEPLOY AND RUN :
+========================
+1. Install Node JS
+2. Install NPM
+3. Run npm install
+4. Run npm start / node index.js
+
 
 1. CURRENT WEATHER
    ===============
    
    ENDPOINT :- /current
    ========
+   
+   Method - POST
 
    USING LATITUDE & LONGITUDE
    ==========================
-   Request Body : 
-   -------------
+   Request Body (JSON) : 
+   -------------------
    {
       "lat" : <latitude_value> ,
       "lon" : <longitude_value>
@@ -18,8 +29,8 @@
    
    USING PLACE
    ===========
-   Request Body :
-   -------------
+   Request Body (JSON) : 
+   -------------------
    {
       "place" : <city_name>
    }
@@ -36,10 +47,12 @@
    ENDPOINT :- /forecast
    ========
    
+   Method - POST
+   
    USING LATITUDE & LONGITUDE
    ==========================
-   Request Body : 
-   -------------
+   Request Body (JSON) : 
+   -------------------
    {
       "lat" : <latitude_value> ,
       "lon" : <longitude_value> ,
@@ -49,8 +62,8 @@
    
    USING PLACE
    ===========
-   Request Body :
-   -------------
+   Request Body (JSON) : 
+   -------------------
    {
       "place" : <city_name> ,
       "numDays" : <number_of_days>
